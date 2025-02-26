@@ -1,0 +1,35 @@
+* {
+   box-sizing: border-box;
+}
+
+html {
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.app-container {
+   display: flex;
+   flex-direction: column;
+   margin-top: 10px;
+   padding: 10px;
+   max-width: 680px;
+}
+
+.main-title {
+   font-size: 35px;
+   margin-bottom: 40px;
+}
+
+.link-title {
+   display: block;
+   text-align: center;
+   width: 220px;
+   border: 1px solid black;
+   padding: 10px;
+   border-radius: 10px;
+   margin-top: 15px;
+}
+
+.link-title:hover {
+   color: rgba(255, 94, 0, 0.904);
+   border-color: rgba(255, 94, 0, 0.904);
+}

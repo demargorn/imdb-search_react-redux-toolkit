@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router';
-import { add, loading, isError } from '../../slices/films.slice';
+import { add, loading, isError, clear } from '../../slices/films.slice';
 import { API, KEY } from '../../helpers/API';
 import Films from '../../pages/Films/Films';
 import './SearchByTitle.css';
@@ -18,6 +18,7 @@ const SearchByTitle = () => {
       e.preventDefault();
 
       dispatch(isError(false)); // сброс ошибок
+      dispatch(clear()) // очищаем стэйт перед следующим запросом
       dispatch(loading(true)); // начали загрузку
 
       try {

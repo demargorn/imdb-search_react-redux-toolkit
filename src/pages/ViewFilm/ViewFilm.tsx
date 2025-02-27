@@ -4,15 +4,17 @@ import { useDispatch, useSelector } from 'react-redux';
 import { loading, isError } from '../../slices/films.slice';
 import { favorite } from '../../slices/films.slice';
 import { API, KEY } from '../../helpers/API';
+import { TypeDispatch, TypeRootState } from '../../store/store';
+import { TypeFilm } from '../../interfaces/film';
 import Spinner from '../../components/Spinner/Spinner';
 import Film from '../../components/Film/Film';
 
 const ViewFilm = () => {
-   const [film, setFilm] = useState('');
+   const [film, setFilm] = useState<TypeFilm>();
    const { id } = useParams();
-   const error = useSelector((s) => s.films.error); // состояние ошибки
-   const load = useSelector((s) => s.films.loading); // состояние загрузки
-   const dispatch = useDispatch();
+   const error = useSelector((s: TypeRootState) => s.films.error); // состояние ошибки
+   const load = useSelector((s: TypeRootState) => s.films.loading); // состояние загрузки
+   const dispatch = useDispatch<TypeDispatch>();
 
    useEffect(() => {
       (async () => {
@@ -43,9 +45,9 @@ const ViewFilm = () => {
             <span className='h3'>Something wrong</span>
          ) : (
             <Film
-               id={film.imdbID}
+               imdbID={film!.imdbID}
                label='To favorite'
-               onClick={() => dispatch(favorite(film))}
+               onClick={() => dispatch(favorite(film!))}
                {...film}
             />
          )}

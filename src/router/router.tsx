@@ -14,7 +14,7 @@ const router = createBrowserRouter([
          {
             path: '/',
             element: <App />,
-            exact: true,
+            // exact: true,
          },
          {
             path: '/search-by-title',

@@ -2,14 +2,15 @@ import { useSelector, useDispatch } from 'react-redux';
 import { favorite } from '../../slices/films.slice';
 import Spinner from '../../components/Spinner/Spinner';
 import MovieNotFound from '../../components/MovieNotFound/MovieNotFound';
+import { TypeDispatch, TypeRootState } from '../../store/store';
 import Film from '../../components/Film/Film';
 import './Films.css';
 
 const Films = () => {
-   const films = useSelector((s) => s.films.all); // все фильмы
-   const error = useSelector((s) => s.films.error); // состояние ошибки
-   const load = useSelector((s) => s.films.loading); // состояние загрузки
-   const dispatch = useDispatch();
+   const films = useSelector((s: TypeRootState) => s.films.all); // все фильмы
+   const error = useSelector((s: TypeRootState) => s.films.error); // состояние ошибки
+   const load = useSelector((s: TypeRootState) => s.films.loading); // состояние загрузки
+   const dispatch = useDispatch<TypeDispatch>();
 
    return (
       <section className='films-container'>

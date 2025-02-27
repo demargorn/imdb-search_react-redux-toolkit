@@ -1,20 +1,20 @@
-import { useState } from 'react';
+import { FormEvent, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router';
 import { add, loading, isError, clear } from '../../slices/films.slice';
 import { API, KEY } from '../../helpers/API';
-import Films from '../../pages/Films/Films';
+import { TypeDispatch } from '../../store/store';
+import Films from '../Films/Films';
 import './SearchByTitle.css';
 
 const SearchByTitle = () => {
-   const [title, setTitle] = useState(''); // название фильма
-
-   const dispatch = useDispatch();
+   const [title, setTitle] = useState<string>(''); // название фильма
+   const dispatch = useDispatch<TypeDispatch>();
    const navigate = useNavigate();
 
    const handleFormReset = () => setTitle('');
 
-   const handleFormSubmit = async (e) => {
+   const handleFormSubmit = async (e: FormEvent) => {
       e.preventDefault();
 
       dispatch(isError(false)); // сброс ошибок

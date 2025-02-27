@@ -1,19 +1,20 @@
-import { useState } from 'react';
+import { FormEvent, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router';
 import { add, loading, isError, clear } from '../../slices/films.slice';
 import { API, KEY } from '../../helpers/API';
+import { TypeDispatch } from '../../store/store';
 import Films from '../Films/Films';
 import './SearchByID.css';
 
 const SearchByID = () => {
-   const [id, setId] = useState(''); // id фильма
+   const [id, setId] = useState<string>(''); // id фильма
    const navigate = useNavigate();
-   const dispatch = useDispatch();
+   const dispatch = useDispatch<TypeDispatch>();
 
    const handleFormReset = () => setId('');
 
-   const handleFormSubmit = async (e) => {
+   const handleFormSubmit = async (e: FormEvent) => {
       e.preventDefault();
 
       dispatch(isError(false)); // сброс ошибок

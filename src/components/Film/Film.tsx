@@ -1,7 +1,9 @@
 import { Link } from 'react-router';
+import { TypeFilm } from '../../interfaces/film';
+import { TypeButton } from '../../interfaces/button';
 import './Film.css';
 
-const Film = (props) => {
+const Film = (props: TypeFilm & TypeButton) => {
    return (
       <article className='film'>
          <Link to={`/film/${props.imdbID}`}>

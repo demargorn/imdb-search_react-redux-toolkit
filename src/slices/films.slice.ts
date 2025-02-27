@@ -1,6 +1,14 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { TypeFilm } from '../interfaces/film';
 
-const initialState = {
+export type TypeState = {
+   all: TypeFilm[];
+   favorite: TypeFilm[];
+   error: boolean;
+   loading: boolean;
+};
+
+const initialState: TypeState = {
    all: [],
    favorite: [],
    error: false,
@@ -12,11 +20,11 @@ const filmsSlice = createSlice({
    initialState,
    reducers: {
       // загрузить данные
-      add: (state, { payload }) => {
+      add: (state, { payload }: PayloadAction<TypeFilm>) => {
          state.all.push(payload);
       },
       // добавить в избранное
-      favorite: (state, { payload }) => {
+      favorite: (state, { payload }: PayloadAction<TypeFilm>) => {
          const { imdbID } = payload;
          const existing = state.favorite.find((s) => s.imdbID === imdbID);
 
@@ -29,16 +37,16 @@ const filmsSlice = createSlice({
          alert('Film added succesfully');
       },
       // удалить из избранного
-      remove: (state, { payload }) => {
+      remove: (state, { payload }: PayloadAction<TypeFilm>) => {
          const { imdbID } = payload;
          state.favorite = state.favorite.filter((s) => s.imdbID !== imdbID);
       },
       // индикатор загрузки
-      loading: (state, { payload }) => {
+      loading: (state, { payload }: PayloadAction<boolean>) => {
          return { ...state, loading: payload };
       },
       // индикатор ошибки
-      isError: (state, { payload }) => {
+      isError: (state, { payload }: PayloadAction<boolean>) => {
          return { ...state, error: payload };
       },
       // очистка хранилища

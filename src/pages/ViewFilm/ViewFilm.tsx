@@ -36,16 +36,17 @@ const ViewFilm = () => {
          }
          dispatch(loading(false)); // закончили загрузку успешно
       })();
-   }, [id, dispatch]);
+   }, [id]);
 
    return (
       <>
+         <h3 className='h3 favorite-title'>About film</h3>
          {load && <Spinner />}
          {error ? (
             <span className='h3'>Something wrong</span>
          ) : (
             <Film
-               imdbID={film!.imdbID}
+               imdbID={film?.imdbID}
                label='To favorite'
                onClick={() => dispatch(favorite(film!))}
                {...film}

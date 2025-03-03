@@ -21,7 +21,7 @@ const Film = (props: TypeFilm & TypeButton) => {
             {props.Actors && <div className='film-about'>Актеры: {props.Actors}</div>}
             {props.imdbRating && <div className='film-about'>Рейтинг: {props.imdbRating}</div>}
          </div>
-         <button type='button' className='btn btn-danger btn-favorite' onClick={props.onClick}>
+         <button type='button' className='btn btn-danger btn-to-favorite' onClick={props.onClick}>
             {props.label}
          </button>
       </article>

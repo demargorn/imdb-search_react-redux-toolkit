@@ -5,7 +5,6 @@ import { add, loading, isError, clear } from '../../slices/films.slice';
 import { API, KEY } from '../../helpers/API';
 import { TypeDispatch } from '../../store/store';
 import Films from '../Films/Films';
-import './SearchByID.css';
 
 const SearchByID = () => {
    const [id, setId] = useState<string>(''); // id фильма

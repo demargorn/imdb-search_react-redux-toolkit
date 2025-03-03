@@ -4,6 +4,7 @@
 
 html {
    font-family: Verdana, Geneva, Tahoma, sans-serif;
+   font-size: 16px;
 }
 
 .app-container {
@@ -32,4 +33,69 @@ html {
 .link-title:hover {
    color: rgba(255, 94, 0, 0.904);
    border-color: rgba(255, 94, 0, 0.904);
+}
+
+.form-header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.form-search-by-title,
+.form-search-by-id {
+   background-color: #fafafa;
+   border: 1px solid rgba(131, 126, 126, 0.356);
+   padding: 10px;
+   margin-bottom: 50px;
+}
+
+.form-title {
+   width: 480px;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   line-height: 45px;
+   border-bottom: 1px solid rgba(131, 126, 126, 0.356);
+}
+
+.form-text-input {
+   width: 430px;
+}
+
+.form-id-input {
+   width: 250px;
+}
+
+.btn-container {
+   display: flex;
+   gap: 10px;
+}
+
+.button {
+   height: 38px;
+   margin-top: 15px;
+}
+
+.btn-to-favorite {
+   width: 125px;
+   height: 38px;
+}
+
+.btn-my-favorite {
+   width: 140px;
+   height: 38px;
+   margin-top: 15px;
+}
+
+.input-container {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.favorite-title {
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   background-color: #fafafa;
+   border: 1px solid rgba(131, 126, 126, 0.356);
+   line-height: 45px;
+   padding: 10px;
+   margin-bottom: 50px;
 }

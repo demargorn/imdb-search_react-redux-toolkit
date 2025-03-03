@@ -1,8 +1,8 @@
 import { createBrowserRouter } from 'react-router';
 import Layout from '../layouts/Layout';
 import App from '../components/App';
-import SearchByID from '../pages/SearchByID/SearchByID';
 import SearchByTitle from '../pages/SearchByTitle/SearchByTitle';
+import SearchByID from '../pages/SearchByID/SearchByID';
 import Favorites from '../pages/Favorites/Favorites';
 import ViewFilm from '../pages/ViewFilm/ViewFilm';
 
@@ -14,7 +14,6 @@ const router = createBrowserRouter([
          {
             path: '/',
             element: <App />,
-            // exact: true,
          },
          {
             path: '/search-by-title',

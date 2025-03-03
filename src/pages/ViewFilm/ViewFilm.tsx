@@ -11,9 +11,9 @@ import Film from '../../components/Film/Film';
 
 const ViewFilm = () => {
    const [film, setFilm] = useState<TypeFilm>();
-   const { id } = useParams();
    const error = useSelector((s: TypeRootState) => s.films.error); // состояние ошибки
    const load = useSelector((s: TypeRootState) => s.films.loading); // состояние загрузки
+   const { id } = useParams();
    const dispatch = useDispatch<TypeDispatch>();
 
    useEffect(() => {

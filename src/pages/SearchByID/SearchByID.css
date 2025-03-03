@@ -18,10 +18,6 @@
    border-bottom: 1px solid rgba(131, 126, 126, 0.356);
 }
 
-/* .btn-my-favorite {
-   width: 110px;
-} */
-
 .input-container {
    display: flex;
    justify-content: space-between;
@@ -31,7 +27,6 @@
 .form-id-input {
    width: 250px;
 }
-
 
 .btn-container {
    display: flex;

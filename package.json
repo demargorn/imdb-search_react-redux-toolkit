@@ -1,5 +1,6 @@
 {
    "name": "imdb-search_react-redux-toolkit",
+   "homepage": "https://demargorn.github.io/imdb-search_react-redux-toolkit",
    "private": true,
    "version": "1.0.0",
    "type": "module",

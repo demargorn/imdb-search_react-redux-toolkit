@@ -1,8 +1,8 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { remove } from '../../slices/films.slice';
-import { TypeRootState, TypeDispatch } from '../../store/store';
-import Film from '../../components/Film/Film';
-import '../../components/Film/Film.css';
+import { remove } from '@/slices/films.slice';
+import { TypeRootState, TypeDispatch } from '@/store/store';
+import Film from '@/components/Film/Film';
+import '@/components/Film/Film.css';
 
 const Favorites = () => {
    const favorites = useSelector((s: TypeRootState) => s.films.favorite);

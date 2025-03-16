@@ -1,9 +1,9 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { favorite } from '../../slices/films.slice';
-import { TypeDispatch, TypeRootState } from '../../store/store';
-import Spinner from '../../components/Spinner/Spinner';
-import MovieNotFound from '../../components/MovieNotFound/MovieNotFound';
-import Film from '../../components/Film/Film';
+import { favorite } from '@/slices/films.slice';
+import { TypeDispatch, TypeRootState } from '@/store/store';
+import Spinner from '@/components/Spinner/Spinner';
+import MovieNotFound from '@/components/MovieNotFound/MovieNotFound';
+import Film from '@/components/Film/Film';
 
 const Films = () => {
    const films = useSelector((s: TypeRootState) => s.films.all); // все фильмы

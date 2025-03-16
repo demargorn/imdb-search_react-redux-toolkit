@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { useDispatch, useSelector } from 'react-redux';
-import { loading, isError } from '../../slices/films.slice';
-import { favorite } from '../../slices/films.slice';
-import { API, KEY } from '../../helpers/API';
-import { TypeDispatch, TypeRootState } from '../../store/store';
-import { TypeFilm } from '../../interfaces/film';
-import Spinner from '../../components/Spinner/Spinner';
-import Film from '../../components/Film/Film';
+import { loading, isError } from '@/slices/films.slice';
+import { favorite } from '@/slices/films.slice';
+import { API, KEY } from '@/helpers/API';
+import { TypeDispatch, TypeRootState } from '@/store/store';
+import { TypeFilm } from '@/interfaces/film';
+import Spinner from '@/components/Spinner/Spinner';
+import Film from '@/components/Film/Film';
 
 const ViewFilm = () => {
    const [film, setFilm] = useState<TypeFilm>();

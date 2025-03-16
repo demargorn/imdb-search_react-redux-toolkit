@@ -1,6 +1,6 @@
 import { Link } from 'react-router';
-import { TypeFilm } from '../../interfaces/film';
-import { TypeButton } from '../../interfaces/button';
+import { TypeFilm } from '@/interfaces/film';
+import { TypeButton } from '@/interfaces/button';
 import './Film.css';
 
 const Film = (props: TypeFilm & TypeButton) => {

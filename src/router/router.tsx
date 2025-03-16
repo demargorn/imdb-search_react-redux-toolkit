@@ -1,12 +1,12 @@
-import { createBrowserRouter } from 'react-router';
-import Layout from '../layouts/Layout';
-import App from '../components/App';
-import SearchByTitle from '../pages/SearchByTitle/SearchByTitle';
-import SearchByID from '../pages/SearchByID/SearchByID';
-import Favorites from '../pages/Favorites/Favorites';
-import ViewFilm from '../pages/ViewFilm/ViewFilm';
+import { createHashRouter } from 'react-router';
+import Layout from '@/layouts/Layout';
+import App from '@/components/App/App';
+import SearchByTitle from '@/pages/SearchByTitle/SearchByTitle';
+import SearchByID from '@/pages/SearchByID/SearchByID';
+import Favorites from '@/pages/Favorites/Favorites';
+import ViewFilm from '@/pages/ViewFilm/ViewFilm';
 
-const router = createBrowserRouter([
+const router = createHashRouter([
    {
       path: '/',
       element: <Layout />,

@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { TypeFilm } from '../interfaces/film';
+import { TypeFilm } from '@/interfaces/film';
 
 export type TypeState = {
    all: TypeFilm[];
